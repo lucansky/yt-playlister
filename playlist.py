@@ -13,5 +13,7 @@ else:
 playlist = pafy.get_playlist(url)
 
 for video in playlist["items"]:
-	print video["pafy"].title, "\n"
 	video["pafy"].getbestaudio().download()
+	print video["pafy"].title + "               "
+
+print "\n"
